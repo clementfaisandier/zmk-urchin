@@ -34,7 +34,7 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        } 
+        };
     };
 
     conditional_layers {
@@ -121,6 +121,7 @@
                                                       &trans      &trans           &trans     &trans
             //                                     ╰───────────┴───────────╯   ╰───────────┴───────────╯
             >;
+        };
 
         gaming_layer {
             bindings = <
