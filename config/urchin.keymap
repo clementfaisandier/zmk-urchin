@@ -38,12 +38,12 @@
         smm: shift_modified_mod {
             label = "shift_modified_mod";
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             flavor = "tap-preferred";
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
             global-quick-tap;
-            bindings = <&kp>, <&sm LPAR UNDER>;
+            bindings = <&kp RCTRL>, <&sm LPAR UNDER>;
         };
     };
 
@@ -65,7 +65,7 @@
               &kp    Q    &kp    W    &kp    E    &kp    R    &kp    T        &kp    Y    &kp    U    &kp    I    &kp    O    &kp    P
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
             // │     A     │     S     │     D     │     F     │     G     │   │     H     │     J     │     K     │     L     │    ( _    │
-            HRML(    A     ,     S     ,     D     ,     F )  &kp    G        &kp    H   HRMR(   J     ,     K     ,     L   ) &smm RCTRL LPAR
+            HRML(    A     ,     S     ,     D     ,     F )  &kp    G        &kp    H   HRMR(   J     ,     K     ,     L     )    &smm
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
             // │     Z     │     X     │     C     │     V     │     B     │   │     N     │     M     │    , '    │    . :    │   </ /    │
               &kp    Z    &kp    X    &kp    C    &kp    V    &kp    B        &kp    N    &kp    M &sm KP_COMMA APOS &sm KP_DOT COLON &sm RET KP_SLASH
