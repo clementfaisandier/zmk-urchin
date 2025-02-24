@@ -44,7 +44,7 @@
             quick-tap-ms = <150>;
             global-quick-tap;
             bindings = <&kp>, <&sm LPAR UNDER>;
-        }
+        };
     };
 
     conditional_layers {
