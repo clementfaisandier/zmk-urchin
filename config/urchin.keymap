@@ -93,7 +93,7 @@
               &kp   ESC   &kp   DEL   &kp   CAPS  &kp  PSCRN  &kp INSERT          &trans  &kp  HOME   &kp  PG_DN  &kp  PG_UP  &kp  END
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
             // │    GUI    │   LCTRL   │   LSHFT   │    LALT   │           │   │           │     <     │     V     │    /^\    │     >     │
-              &kp  LCTRL  &kp  LSHIFT &kp   TAB   %kp  LGUI       &trans          &trans  &kp   LEFT  &kp   DOWN  %kp    UP   %kp   RIGHT
+              &kp  LCTRL  &kp  LSHIFT &kp   TAB   &kp  LGUI       &trans          &trans  &kp   LEFT  &kp   DOWN  &kp    UP   &kp   RIGHT
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
             // │           │           │           │           │           │   │ PLY PAUSE │   MUTE    │ VOL DOWN  │  VOL UP   │    </     │
                   &trans      &trans      &trans      &trans      &trans      &KP  C_PP   &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP &kp RET
