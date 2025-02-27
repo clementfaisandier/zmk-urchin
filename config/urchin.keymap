@@ -26,10 +26,70 @@
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
-        sm: shift_modified {
+        sm_pu: shift_modified {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp LPAR>, <&kp UNDER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_ca: shift_modified {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_COMMA>, <&kp APOS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_dc: shift_modified {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_rs: shift_modified {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RET>, <&kp KP_SLASH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_dg: shift_modified {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DQT>, <&kp GRAVE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_lg: shift_modified {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LT>, <&kp LG>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_mc: shift_modified {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_MULTIPLY>, <&kp CARET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_op: shift_modified {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N0>, <&kp RPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_dco: shift_modified {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N2>, <&kp KP_COMMA>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_ts: shift_modified {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N3>, <&kp KP_DOT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_sa: shift_modified {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_SLASH>, <&kp AMPS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -52,10 +112,10 @@
               &kp    Q    &kp    W    &kp    E    &kp    R    &kp    T        &kp    Y    &kp    U    &kp    I    &kp    O    &kp    P
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
             // │     A     │     S     │     D     │     F     │     G     │   │     H     │     J     │     K     │     L     │    ( _    │
-            HRML(    A     ,     S     ,     D     ,     F )  &kp    G        &kp    H   HRMR(   J     ,     K     ,     L    ) &sm LPAR UNDER
+            HRML(    A     ,     S     ,     D     ,     F )  &kp    G        &kp    H   HRMR(   J     ,     K     ,     L     )   &sm_pu
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
             // │     Z     │     X     │     C     │     V     │     B     │   │     N     │     M     │    , '    │    . :    │   </ /    │
-              &kp    Z    &kp    X    &kp    C    &kp    V    &kp    B        &kp    N    &kp    M &sm KP_COMMA APOS &sm KP_DOT COLON &sm RET KP_SLASH
+              &kp    Z    &kp    X    &kp    C    &kp    V    &kp    B        &kp    N    &kp    M         &sm_ca      &sm_dc     &sm_rs
             // ╰───────────┴───────────┴───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────╯
             //                                     │  NAV ->   │    <XX    │   │    ._.    │  SYM  </  │
                                                   &lt NAV TAB &kp   BSPC      &kp  SPACE  &lt SYM RET
@@ -68,13 +128,13 @@
             // Symbols and Numbers:
             // ╭───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────╮
             // │     &     │     |     │     ]     │     }     │     $     │   │     +     │     7     │     8     │     9     │    * ^    │
-              &kp  AMPS   &kp  PIPE   &kp  RBKT   &sm   RBRC  &kp  DOLLAR     &kp  PLUS   &kp    N7   &kp    N8   &kp    N9   &sm KP_MULTIPLY CARET
+              &kp  AMPS   &kp  PIPE   &kp  RBKT   &kp   RBRC  &kp  DOLLAR     &kp  PLUS   &kp    N7   &kp    N8   &kp    N9        &sm_mc
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
             // │    " `    │    /^\    │     [     │     {     │    < >    │   │    = ~    │     4     │     5     │     6     │    0 )    │
-              &sm DQT GRAVE &kp  LSHFT &kp  LBKT  &kp   LBRC  &sm  LT GT     &kp KP_EQUAL TILDE &kp N4 &kp   N5   &kp   N6   &sm KP_N0 RPAR
+                  &sm_dg  &kp  LSHFT &kp  LBKT  &kp   LBRC         &sm_lg     &kp KP_EQUAL TILDE &kp N4 &kp   N5   &kp   N6        &sm_op
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
             // │     @     │     #     │     !     │     ?     │     \     │   │    - _    │     1     │    2 ,    │    3 .    │    / %    │
-              &kp    AT   &kp   HASH  &kp  EXCL   &kp  QMARK  &kp  BSLH       &kp MINUS &kp N1 &sm KP_N2 KP_COMMA &kp KP_N3 KP_DOT &sm KP_SLASH AMPS
+              &kp    AT   &kp   HASH  &kp  EXCL   &kp  QMARK  &kp  BSLH       &kp MINUS   &kp   N1        &sm_dco      &sm_ts      &sm_sa
             // ╰───────────┴───────────┴───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────╯
             //                                     │    MISC   │    <XX    │   │    ._.    │     V     │
                                                        &trans      &trans          &trans      &trans
