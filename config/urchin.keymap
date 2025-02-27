@@ -26,67 +26,67 @@
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
-        sm_pu: shift_modified {
+        sm_pu: shift_modified_left_parenthesis_underscore {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp UNDER>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        sm_ca: shift_modified {
+        sm_ca: shift_modified_comma_apostrophe {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp KP_COMMA>, <&kp APOS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        sm_dc: shift_modified {
+        sm_dc: shift_modified_dot_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp KP_DOT>, <&kp COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        sm_rs: shift_modified {
+        sm_rs: shift_modified_return_slash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RET>, <&kp KP_SLASH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        sm_dg: shift_modified {
+        sm_dg: shift_modified_double_quote_grave {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DQT>, <&kp GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        sm_lg: shift_modified {
+        sm_lg: shift_modified_left_right_arrow {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LT>, <&kp LG>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        sm_mc: shift_modified {
+        sm_mc: shift_modified_multiply_exponent {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp KP_MULTIPLY>, <&kp CARET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        sm_op: shift_modified {
+        sm_op: shift_modified_zero_parenthesis {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp KP_N0>, <&kp RPAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        sm_dco: shift_modified {
+        sm_dco: shift_modified_two_comma {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp KP_N2>, <&kp KP_COMMA>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        sm_ts: shift_modified {
+        sm_ts: shift_modified_three_dot {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp KP_N3>, <&kp KP_DOT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        sm_sa: shift_modified {
+        sm_sa: shift_modified_slash_ampersand {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp KP_SLASH>, <&kp AMPS>;
