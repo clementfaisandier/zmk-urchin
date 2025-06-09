@@ -10,89 +10,89 @@
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LCTRL k2 &ht LSHFT k3  &ht LALT  k4
 #define HRMR(k1,k2,k3) &ht RALT k1 &ht RSHFT  k2  &ht RCTRL k3
 
-#define WIN 0
-#define SYM 1
-#define NAV 2
-#define MSC 3
-#define GAM 4
+// #define WIN 0
+// #define SYM 1
+// #define NAV 2
+// #define MSC 3
+// #define GAM 4
 
 / {
-    behaviors {
-        ht: hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            bindings = <&kp>, <&kp>;
-        };
-        sm_pu: left_parenthesis_underscore {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp UNDER>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        sm_ca: comma_apostrophe {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp KP_COMMA>, <&kp APOS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        sm_dc: dot_colon {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp KP_DOT>, <&kp COLON>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        sm_rs: return_slash {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RET>, <&kp KP_SLASH>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        sm_dg: double_quote_grave {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DQT>, <&kp GRAVE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        sm_lg: left_right_arrow {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LT>, <&kp GT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        sm_mc: multiply_exponent {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp KP_MULTIPLY>, <&kp CARET>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        sm_op: zero_parenthesis {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp KP_N0>, <&kp RPAR>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        sm_dco: two_comma {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp KP_N2>, <&kp KP_COMMA>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        sm_ts: three_dot {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp KP_N3>, <&kp KP_DOT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        sm_sa: slash_ampersand {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp KP_SLASH>, <&kp AMPS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    };
+    // behaviors {
+    //     ht: hold_tap {
+    //         compatible = "zmk,behavior-hold-tap";
+    //         #binding-cells = <2>;
+    //         flavor = "tap-preferred";
+    //         tapping-term-ms = <220>;
+    //         quick-tap-ms = <150>;
+    //         bindings = <&kp>, <&kp>;
+    //     };
+    //     sm_pu: left_parenthesis_underscore {
+    //         compatible = "zmk,behavior-mod-morph";
+    //         #binding-cells = <0>;
+    //         bindings = <&kp LPAR>, <&kp UNDER>;
+    //         mods = <(MOD_LSFT|MOD_RSFT)>;
+    //     };
+    //     sm_ca: comma_apostrophe {
+    //         compatible = "zmk,behavior-mod-morph";
+    //         #binding-cells = <0>;
+    //         bindings = <&kp KP_COMMA>, <&kp APOS>;
+    //         mods = <(MOD_LSFT|MOD_RSFT)>;
+    //     };
+    //     sm_dc: dot_colon {
+    //         compatible = "zmk,behavior-mod-morph";
+    //         #binding-cells = <0>;
+    //         bindings = <&kp KP_DOT>, <&kp COLON>;
+    //         mods = <(MOD_LSFT|MOD_RSFT)>;
+    //     };
+    //     sm_rs: return_slash {
+    //         compatible = "zmk,behavior-mod-morph";
+    //         #binding-cells = <0>;
+    //         bindings = <&kp RET>, <&kp KP_SLASH>;
+    //         mods = <(MOD_LSFT|MOD_RSFT)>;
+    //     };
+    //     sm_dg: double_quote_grave {
+    //         compatible = "zmk,behavior-mod-morph";
+    //         #binding-cells = <0>;
+    //         bindings = <&kp DQT>, <&kp GRAVE>;
+    //         mods = <(MOD_LSFT|MOD_RSFT)>;
+    //     };
+    //     sm_lg: left_right_arrow {
+    //         compatible = "zmk,behavior-mod-morph";
+    //         #binding-cells = <0>;
+    //         bindings = <&kp LT>, <&kp GT>;
+    //         mods = <(MOD_LSFT|MOD_RSFT)>;
+    //     };
+    //     sm_mc: multiply_exponent {
+    //         compatible = "zmk,behavior-mod-morph";
+    //         #binding-cells = <0>;
+    //         bindings = <&kp KP_MULTIPLY>, <&kp CARET>;
+    //         mods = <(MOD_LSFT|MOD_RSFT)>;
+    //     };
+    //     sm_op: zero_parenthesis {
+    //         compatible = "zmk,behavior-mod-morph";
+    //         #binding-cells = <0>;
+    //         bindings = <&kp KP_N0>, <&kp RPAR>;
+    //         mods = <(MOD_LSFT|MOD_RSFT)>;
+    //     };
+    //     sm_dco: two_comma {
+    //         compatible = "zmk,behavior-mod-morph";
+    //         #binding-cells = <0>;
+    //         bindings = <&kp KP_N2>, <&kp KP_COMMA>;
+    //         mods = <(MOD_LSFT|MOD_RSFT)>;
+    //     };
+    //     sm_ts: three_dot {
+    //         compatible = "zmk,behavior-mod-morph";
+    //         #binding-cells = <0>;
+    //         bindings = <&kp KP_N3>, <&kp KP_DOT>;
+    //         mods = <(MOD_LSFT|MOD_RSFT)>;
+    //     };
+    //     sm_sa: slash_ampersand {
+    //         compatible = "zmk,behavior-mod-morph";
+    //         #binding-cells = <0>;
+    //         bindings = <&kp KP_SLASH>, <&kp AMPS>;
+    //         mods = <(MOD_LSFT|MOD_RSFT)>;
+    //     };
+    // };
 
     // conditional_layers {
     //     compatible = "zmk,conditional-layers";
@@ -106,7 +106,7 @@
 
         compatible = "zmk,keymap";
         default_layer {
-            bindings = <=[]
+            bindings = <
             &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans
             &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans
             &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans
