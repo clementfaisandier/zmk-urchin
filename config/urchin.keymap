@@ -17,7 +17,7 @@
 // #define GAM 4
 
 / {
-    // behaviors {
+    behaviors {
     //     ht: hold_tap {
     //         compatible = "zmk,behavior-hold-tap";
     //         #binding-cells = <2>;
@@ -26,12 +26,12 @@
     //         quick-tap-ms = <150>;
     //         bindings = <&kp>, <&kp>;
     //     };
-    //     sm_pu: left_parenthesis_underscore {
-    //         compatible = "zmk,behavior-mod-morph";
-    //         #binding-cells = <0>;
-    //         bindings = <&kp LPAR>, <&kp UNDER>;
-    //         mods = <(MOD_LSFT|MOD_RSFT)>;
-    //     };
+        sm_pu: left_parenthesis_underscore {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp UNDER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     //     sm_ca: comma_apostrophe {
     //         compatible = "zmk,behavior-mod-morph";
     //         #binding-cells = <0>;
@@ -92,7 +92,7 @@
     //         bindings = <&kp KP_SLASH>, <&kp AMPS>;
     //         mods = <(MOD_LSFT|MOD_RSFT)>;
     //     };
-    // };
+    };
 
     // conditional_layers {
     //     compatible = "zmk,conditional-layers";
@@ -108,7 +108,7 @@
         default_layer {
             bindings = <
             &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans
-            &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans
+            HRML(    A     ,     S     ,     D     ,     F )  &kp    G        &kp    H   HRMR(   J     ,     K     ,     L     )   &sm_pu
             &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans
             &trans    &trans    &trans    &trans
             >;
