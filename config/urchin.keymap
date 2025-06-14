@@ -32,24 +32,24 @@
             bindings = <&kp LPAR>, <&kp UNDER>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        // sm_ca: comma_apostrophe {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp KP_COMMA>, <&kp APOS>;
-        //     mods = <(MOD_LSFT|MOD_RSFT)>;
-        // };
-        // sm_dc: dot_colon {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp KP_DOT>, <&kp COLON>;
-        //     mods = <(MOD_LSFT|MOD_RSFT)>;
-        // };
-        // sm_rs: return_slash {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp RET>, <&kp KP_SLASH>;
-        //     mods = <(MOD_LSFT|MOD_RSFT)>;
-        // };
+        sm_ca: comma_apostrophe {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_COMMA>, <&kp APOS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_dc: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_rs: return_slash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RET>, <&kp KP_SLASH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     //     sm_dg: double_quote_grave {
     //         compatible = "zmk,behavior-mod-morph";
     //         #binding-cells = <0>;
