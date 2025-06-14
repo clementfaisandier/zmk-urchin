@@ -10,8 +10,8 @@
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LCTRL k2 &ht LSHFT k3  &ht LALT  k4
 #define HRMR(k1,k2,k3) &ht RALT k1 &ht RSHFT  k2  &ht RCTRL k3
 
-// #define WIN 0
-// #define SYM 1
+#define WIN 0
+#define SYM 1
 // #define NAV 2
 // #define MSC 3
 // #define GAM 4
