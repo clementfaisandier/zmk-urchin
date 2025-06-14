@@ -32,24 +32,24 @@
             bindings = <&kp LPAR>, <&kp UNDER>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    //     sm_ca: comma_apostrophe {
-    //         compatible = "zmk,behavior-mod-morph";
-    //         #binding-cells = <0>;
-    //         bindings = <&kp KP_COMMA>, <&kp APOS>;
-    //         mods = <(MOD_LSFT|MOD_RSFT)>;
-    //     };
-    //     sm_dc: dot_colon {
-    //         compatible = "zmk,behavior-mod-morph";
-    //         #binding-cells = <0>;
-    //         bindings = <&kp KP_DOT>, <&kp COLON>;
-    //         mods = <(MOD_LSFT|MOD_RSFT)>;
-    //     };
-    //     sm_rs: return_slash {
-    //         compatible = "zmk,behavior-mod-morph";
-    //         #binding-cells = <0>;
-    //         bindings = <&kp RET>, <&kp KP_SLASH>;
-    //         mods = <(MOD_LSFT|MOD_RSFT)>;
-    //     };
+        sm_ca: comma_apostrophe {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_COMMA>, <&kp APOS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_dc: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_rs: return_slash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RET>, <&kp KP_SLASH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     //     sm_dg: double_quote_grave {
     //         compatible = "zmk,behavior-mod-morph";
     //         #binding-cells = <0>;
@@ -104,35 +104,36 @@
 
     keymap {
 
-        compatible = "zmk,keymap";
-        default_layer {
-            bindings = <
-            &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans
-            HRML(    A     ,     S     ,     D     ,     F )  &kp    G        &kp    H   HRMR(   J     ,     K     ,     L     )   &sm_pu
-            &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans
-            &trans    &trans    &trans    &trans
-            >;
-        };
-
         // compatible = "zmk,keymap";
         // default_layer {
-        //     bindings = <=[]
-        //     // Main:                            &ht RCTRL k4
-        //     // ╭───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────╮
-        //     // │     Q     │     W     │     E     │     R     │     T     │   │     Y     │     U     │     I     │     O     │     P     │
-        //       &kp    Q    &kp    W    &kp    E    &kp    R    &kp    T        &kp    Y    &kp    U    &kp    I    &kp    O    &kp    P
-        //     // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
-        //     // │     A     │     S     │     D     │     F     │     G     │   │     H     │     J     │     K     │     L     │    ( _    │
+        //     bindings = <
+        //     &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans
         //     HRML(    A     ,     S     ,     D     ,     F )  &kp    G        &kp    H   HRMR(   J     ,     K     ,     L     )   &sm_pu
-        //     // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
-        //     // │     Z     │     X     │     C     │     V     │     B     │   │     N     │     M     │    , '    │    . :    │   </ /    │
-        //       &kp    Z    &kp    X    &kp    C    &kp    V    &kp    B        &kp    N    &kp    M         &sm_ca      &sm_dc     &sm_rs
-        //     // ╰───────────┴───────────┴───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────╯
-        //     //                                     │  NAV ->   │    <XX    │   │    ._.    │  SYM  </  │
-        //                                           &lt NAV TAB &kp   BSPC      &kp  SPACE  &lt SYM RET
-        //     //                                     ╰───────────┴───────────╯   ╰───────────┴───────────╯
+        //     &trans    &trans    &trans    &trans    &trans        &trans    &trans    &trans    &trans    &trans
+        //     &trans    &trans    &trans    &trans
         //     >;
         // };
+
+        compatible = "zmk,keymap";
+        default_layer {
+            bindings = <=[]
+            // Main:                            &ht RCTRL k4
+            // ╭───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────╮
+            // │     Q     │     W     │     E     │     R     │     T     │   │     Y     │     U     │     I     │     O     │     P     │
+              &kp    Q    &kp    W    &kp    E    &kp    R    &kp    T        &kp    Y    &kp    U    &kp    I    &kp    O    &kp    P
+            // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
+            // │     A     │     S     │     D     │     F     │     G     │   │     H     │     J     │     K     │     L     │    ( _    │
+            HRML(    A     ,     S     ,     D     ,     F )  &kp    G        &kp    H   HRMR(   J     ,     K     ,     L     )   &sm_pu
+            // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
+            // │     Z     │     X     │     C     │     V     │     B     │   │     N     │     M     │    , '    │    . :    │   </ /    │
+              &kp    Z    &kp    X    &kp    C    &kp    V    &kp    B        &kp    N    &kp    M         &sm_ca      &sm_dc     &sm_rs
+            // ╰───────────┴───────────┴───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────╯
+            //                                     │  NAV ->   │    <XX    │   │    ._.    │  SYM  </  │
+                                                  &lt TAB TAB &kp   BSPC      &kp  SPACE  &lt RET RET
+            //                                     ╰───────────┴───────────╯   ╰───────────┴───────────╯
+                                                //   &lt NAV TAB &kp   BSPC      &kp  SPACE  &lt SYM RET
+            >;
+        };
 
         // symbol_number_layer {
         //     bindings = <
