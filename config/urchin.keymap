@@ -132,7 +132,7 @@
               &kp  AMPS   &kp  PIPE   &kp  RBKT   &kp   RBRC  &kp  DOLLAR     &kp  PLUS   &kp    N7   &kp    N8   &kp    N9       /* &sm_mc*/&none
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
             // │    " `    │    /^\    │     [     │     {     │    < >    │   │    = ~    │     4     │     5     │     6     │    0 )    │
-         /*&sm_dg*/&none  &kp  LSHFT  &kp  LBKT   &kp   LBRC/*&sm_lg*/&none   &kp KP_EQUAL TILDE &kp N4 &kp   N5   &kp   N6        /*&sm_op*/&none
+         /*&sm_dg*/&none  &kp  LSHFT  &kp  LBKT   &kp   LBRC/*&sm_lg*/&kp RSHFT   &kp KP_EQUAL TILDE &kp N4 &kp   N5   &kp   N6        /*&sm_op*/&none
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
             // │     @     │     #     │     !     │     ?     │     \     │   │    - _    │     1     │    2 ,    │    3 .    │    / %    │
               &kp    AT   &kp   HASH  &kp  EXCL   &kp  QMARK  &kp  BSLH       &kp MINUS   &kp   N1        /*&sm_dco      &sm_ts      &sm_sa*/&none &none &none
