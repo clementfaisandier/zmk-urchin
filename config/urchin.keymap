@@ -50,18 +50,18 @@
             bindings = <&kp RET>, <&kp KP_SLASH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        sm_dg: double_quote_grave {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DQT>, <&kp GRAVE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         sm_et: equal_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp KP_EQUAL>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    //     sm_dg: double_quote_grave {
-    //         compatible = "zmk,behavior-mod-morph";
-    //         #binding-cells = <0>;
-    //         bindings = <&kp DQT>, <&kp GRAVE>;
-    //         mods = <(MOD_LSFT|MOD_RSFT)>;
-    //     };
     //     sm_lg: left_right_arrow {
     //         compatible = "zmk,behavior-mod-morph";
     //         #binding-cells = <0>;
@@ -138,7 +138,7 @@
               &kp  AMPS   &kp  PIPE   &kp  RBKT   &kp   RBRC  &kp  DOLLAR     &kp  PLUS   &kp    N7   &kp    N8   &kp    N9        &none
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
             // │    " `    │    /^\    │     [     │     {     │    < >    │   │    = ~    │     4     │     5     │     6     │    0 )    │
-                   &none  &kp  LSHFT  &kp  LBKT   &kp   LBRC        &none          &sm_et &kp    N4   &kp   N5    &kp   N6         &none
+                  &sm_dg  &kp  LSHFT  &kp  LBKT   &kp   LBRC        &none          &sm_et &kp    N4   &kp    N5    &kp   N6         &none
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
             // │     @     │     #     │     !     │     ?     │     \     │   │    - _    │     1     │    2 ,    │    3 .    │    / %    │
                    &none       &none       &none       &none       &none           &none       &none       &none       &none       &none
