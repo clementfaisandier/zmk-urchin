@@ -12,7 +12,7 @@
 
 #define WIN 0
 #define SYM 1
-// #define NAV 2
+#define NAV 2
 // #define MSC 3
 // #define GAM 4
 
@@ -126,7 +126,7 @@
               &kp    Z    &kp    X    &kp    C    &kp    V    &kp    B        &kp    N    &kp    M         &sm_ca      &sm_dc     &sm_rs
             // ╰───────────┴───────────┴───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────╯
             //                                     │  NAV ->   │    <XX    │   │    ._.    │  SYM  </  │
-                                                  &kp TAB     &kp   BSPC      &kp  SPACE  &lt SYM RET
+                                                  &lt NAV TAB &kp   BSPC      &kp  SPACE  &lt SYM RET
             //                                     ╰───────────┴───────────╯   ╰───────────┴───────────╯
             >;
         };
@@ -150,43 +150,24 @@
             >;
         };
 
-        // symbol_number_layer {
-        //     bindings = <
-        //     // Symbols and Numbers:
-        //     // ╭───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────╮
-        //     // │     &     │     |     │     ]     │     }     │     $     │   │     +     │     7     │     8     │     9     │    * ^    │
-        //       &kp  AMPS   &kp  PIPE   &kp  RBKT   &kp   RBRC  &kp  DOLLAR     &kp  PLUS   &kp    N7   &kp    N8   &kp    N9       /* &sm_mc*/&none
-        //     // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
-        //     // │    " `    │    /^\    │     [     │     {     │    < >    │   │    = ~    │     4     │     5     │     6     │    0 )    │
-        //  /*&sm_dg*/&none  &kp  LSHFT  &kp  LBKT   &kp   LBRC/*&sm_lg*/&kp RSHFT   &kp KP_EQUAL TILDE &kp N4 &kp   N5   &kp   N6        /*&sm_op*/&none
-        //     // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
-        //     // │     @     │     #     │     !     │     ?     │     \     │   │    - _    │     1     │    2 ,    │    3 .    │    / %    │
-        //       &kp    AT   &kp   HASH  &kp  EXCL   &kp  QMARK  &kp  BSLH       &kp MINUS   &kp   N1        /*&sm_dco      &sm_ts      &sm_sa*/&none &none &none
-        //     // ╰───────────┴───────────┴───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────╯
-        //     //                                     │    MISC   │    <XX    │   │    ._.    │     V     │
-        //                                                &trans      &trans          &trans      &trans
-        //     //                                     ╰───────────┴───────────╯   ╰───────────┴───────────╯
-        //     >;
-        // };
-
-        // navigation_layer {
-        //     bindings = <
-        //     // Navigation:  
-        //     // ╭───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────╮
-        //     // │    ESC    │    XX>    │ Caps Lock │ Print Scr │  Insert   │   │           │   HOME    │  PG DOWN  │   PG UP   │   END     │
-        //       &kp   ESC   &kp   DEL   &kp   CAPS  &kp  PSCRN  &kp INSERT          &trans  &kp  HOME   &kp  PG_DN  &kp  PG_UP  &kp  END
-        //     // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
-        //     // │    GUI    │   LCTRL   │   LSHFT   │    LALT   │           │   │           │     <     │     V     │    /^\    │     >     │
-        //       &kp  LCTRL  &kp  LSHIFT &kp   TAB   &kp  LGUI       &trans          &trans  &kp   LEFT  &kp   DOWN  &kp    UP   &kp   RIGHT
-        //     // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
-        //     // │           │           │           │           │           │   │ PLY PAUSE │   MUTE    │ VOL DOWN  │  VOL UP   │    </     │
-        //           &trans      &trans      &trans      &trans      &trans      &kp  C_PP   &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP &kp RET
-        //     // ╰───────────┴───────────┴───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────╯
-        //     //                                     │     V     │    <XX    │   │    ._.    │    MISC   │
-        //                                               &trans      &trans           &trans     &trans
-        //     //                                     ╰───────────┴───────────╯   ╰───────────┴───────────╯
-        //     >;
-        // };
+        navigation_layer {
+            bindings = <
+            // Navigation:  
+            // ╭───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────╮
+            // │    ESC    │    XX>    │ Caps Lock │ Print Scr │  Insert   │   │           │   HOME    │  PG DOWN  │   PG UP   │   END     │
+              &kp   ESC   &kp   DEL   &kp   CAPS  &kp  PSCRN  &kp INSERT          &trans  &kp  HOME   &kp  PG_DN  &kp  PG_UP  &kp  END
+            // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
+            // │    GUI    │   LCTRL   │   LSHFT   │    LALT   │           │   │           │     <     │     V     │    /^\    │     >     │
+              &kp  LCTRL  &kp  LSHIFT &kp   TAB   &kp  LGUI       &trans          &trans  &kp   LEFT  &kp   DOWN  &kp    UP   &kp   RIGHT
+            // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
+            // │           │           │           │           │           │   │ PLY PAUSE │   MUTE    │ VOL DOWN  │  VOL UP   │    </     │
+                  &trans      &trans      &trans      &trans      &trans      &kp  C_PP   &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP &kp RET
+            // ╰───────────┴───────────┴───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────╯
+            //                                     │     V     │    <XX    │   │    ._.    │    MISC   │
+                                                      &trans      &trans           &trans     &trans
+            //                                     ╰───────────┴───────────╯   ╰───────────┴───────────╯
+            >;
+        };
 
         // miscelanous_layer {
         //     bindings = <
