@@ -50,13 +50,20 @@
             bindings = <&kp RET>, <&kp KP_SLASH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        sm_mc: multiply_exponent {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_MULTIPLY>, <&kp CARET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         sm_dg: double_quote_grave {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DQT>, <&kp GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        sm_lg: left_right_arrow {
+        sm_lr: left_right_arrow {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LT>, <&kp GT>;
@@ -74,30 +81,24 @@
             bindings = <&kp KP_N0>, <&kp RPAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    //     sm_mc: multiply_exponent {
-    //         compatible = "zmk,behavior-mod-morph";
-    //         #binding-cells = <0>;
-    //         bindings = <&kp KP_MULTIPLY>, <&kp CARET>;
-    //         mods = <(MOD_LSFT|MOD_RSFT)>;
-    //     };
-    //     sm_dco: two_comma {
-    //         compatible = "zmk,behavior-mod-morph";
-    //         #binding-cells = <0>;
-    //         bindings = <&kp KP_N2>, <&kp KP_COMMA>;
-    //         mods = <(MOD_LSFT|MOD_RSFT)>;
-    //     };
-    //     sm_ts: three_dot {
-    //         compatible = "zmk,behavior-mod-morph";
-    //         #binding-cells = <0>;
-    //         bindings = <&kp KP_N3>, <&kp KP_DOT>;
-    //         mods = <(MOD_LSFT|MOD_RSFT)>;
-    //     };
-    //     sm_sa: slash_ampersand {
-    //         compatible = "zmk,behavior-mod-morph";
-    //         #binding-cells = <0>;
-    //         bindings = <&kp KP_SLASH>, <&kp AMPS>;
-    //         mods = <(MOD_LSFT|MOD_RSFT)>;
-    //     };
+        sm_dco: two_comma {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N2>, <&kp KP_COMMA>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_ts: three_dot {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_N3>, <&kp KP_DOT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sm_sa: slash_ampersand {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_SLASH>, <&kp AMPS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     // conditional_layers {
@@ -135,13 +136,13 @@
             // Symbols and Numbers:
             // ╭───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────╮
             // │     &     │     |     │     ]     │     }     │     $     │   │     +     │     7     │     8     │     9     │    * ^    │
-              &kp  AMPS   &kp  PIPE   &kp  RBKT   &kp   RBRC  &kp  DOLLAR     &kp  PLUS   &kp    N7   &kp    N8   &kp    N9        &none
+              &kp  AMPS   &kp  PIPE   &kp  RBKT   &kp   RBRC  &kp  DOLLAR     &kp  PLUS   &kp    N7   &kp    N8   &kp    N9        &sm_mc
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
             // │    " `    │    /^\    │     [     │     {     │    < >    │   │    = ~    │     4     │     5     │     6     │    0 )    │
-                  &sm_dg  &kp  LSHFT  &kp  LBKT   &kp   LBRC       &sm_lg          &sm_et &kp    N4   &kp    N5    &kp   N6        &sm_op
+                  &sm_dg  &kp  LSHFT  &kp  LBKT   &kp   LBRC       &sm_lr          &sm_et &kp    N4   &kp    N5    &kp   N6        &sm_op
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
-            // │     @     │     #     │     !     │     ?     │     \     │   │    - _    │     1     │    2 ,    │    3 .    │    / %    │
-                   &none       &none       &none       &none       &none           &none       &none       &none       &none       &none
+            // │     @     │     #     │     !     │     ?     │    \ |    │   │    - _    │     1     │    2 ,    │    3 .    │    / %    │
+              &kp    AT   &kp   HASH  &kp   EXCL  &kp  QMARK  &kp   BSLH      &kp  MINUS  &kp    N1       &sm_dco      &sm_ts      &sm_sa
             // ╰───────────┴───────────┴───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────╯
             //                                     │    MISC   │    <XX    │   │    ._.    │     V     │
                                                        &trans      &trans          &trans      &trans
