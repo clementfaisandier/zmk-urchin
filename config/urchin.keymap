@@ -55,8 +55,7 @@
             #binding-cells = <0>;
             bindings = <&kp KP_EQUAL>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-
-        }
+        };
     //     sm_dg: double_quote_grave {
     //         compatible = "zmk,behavior-mod-morph";
     //         #binding-cells = <0>;
