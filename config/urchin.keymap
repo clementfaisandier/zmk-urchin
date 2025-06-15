@@ -13,7 +13,7 @@
 #define WIN 0
 #define SYM 1
 #define NAV 2
-// #define MSC 3
+#define MSC 3
 // #define GAM 4
 
 / {
@@ -101,13 +101,13 @@
         };
     };
 
-    // conditional_layers {
-    //     compatible = "zmk,conditional-layers";
-    //     tri_layer {
-    //         if-layers = <SYM NAV>;
-    //         then-layer = <MSC>;
-    //     };
-    // };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <SYM NAV>;
+            then-layer = <MSC>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -169,24 +169,24 @@
             >;
         };
 
-        // miscelanous_layer {
-        //     bindings = <
-        //     // Miscelanous:
-        //     // ╭───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────╮
-        //     // │    Fn 1   │    Fn 2   │    Fn 3   │    Fn 4   │ PROFILE 1 │   │ PROFILE 2 │ TOGGLEOUT │           │           │           │
-        //       &kp   F1    &kp   F2    &kp   F3    &kp    F4   &bt BT_SEL 1    &bt BT_SEL 2 &out OUT_TOG   &trans      &trans      &trans
-        //     // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
-        //     // │    Fn 5   │    Fn 6   │    Fn 7   │    Fn 8   │ PROFILE 0 │   │ PROFILE 3 │           │           │           │           │
-        //       &kp   F5    &kp   F6    &kp   F7    &kp    F8   &bt BT_SEL 0    &bt BT_SEL 3    &trans      &trans      &trans      &trans
-        //     // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
-        //     // │    Fn 9   │    Fn 10  │    Fn 11  │    Fn 12  │  CLEAR BT │   │ PROFILE 4 │           │           │           │  Gaming   │
-        //       &kp   F9    &kp   F10   &kp   F11   &kp    F12  &bt BT_CLR      &bt BT_SEL 4    &trans      &trans      &trans  &tog  GAM
-        //     // ╰───────────┴───────────┴───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────╯
-        //     //                                     │     V     │    <XX    │   │    ._.    │     V     │
-        //                                               &trans      &trans           &trans     &trans
-        //     //                                     ╰───────────┴───────────╯   ╰───────────┴───────────╯
-        //     >;
-        // };
+        miscelanous_layer {
+            bindings = <
+            // Miscelanous:
+            // ╭───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────╮
+            // │    Fn 1   │    Fn 2   │    Fn 3   │    Fn 4   │ PROFILE 1 │   │ PROFILE 2 │ TOGGLEOUT │           │           │           │
+              &kp   F1    &kp   F2    &kp   F3    &kp    F4   &bt BT_SEL 1    &bt BT_SEL 2 &out OUT_TOG   &trans      &trans      &trans
+            // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
+            // │    Fn 5   │    Fn 6   │    Fn 7   │    Fn 8   │ PROFILE 0 │   │ PROFILE 3 │           │           │           │           │
+              &kp   F5    &kp   F6    &kp   F7    &kp    F8   &bt BT_SEL 0    &bt BT_SEL 3    &trans      &trans      &trans      &trans
+            // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
+            // │    Fn 9   │    Fn 10  │    Fn 11  │    Fn 12  │  CLEAR BT │   │ PROFILE 4 │           │           │           │  Gaming   │
+              &kp   F9    &kp   F10   &kp   F11   &kp    F12  &bt BT_CLR      &bt BT_SEL 4    &trans      &trans      &trans  &tog  GAM
+            // ╰───────────┴───────────┴───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────╯
+            //                                     │     V     │    <XX    │   │    ._.    │     V     │
+                                                      &trans      &trans           &trans     &trans
+            //                                     ╰───────────┴───────────╯   ╰───────────┴───────────╯
+            >;
+        };
 
         // gaming_layer {
         //     bindings = <
