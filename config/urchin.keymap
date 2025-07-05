@@ -75,7 +75,7 @@
             bindings = <&kp KP_EQUAL>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        sm_sp: slash_percent {X
+        sm_sp: slash_percent {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp KP_SLASH>, <&kp PRCNT>;
