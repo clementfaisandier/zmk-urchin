@@ -7,8 +7,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LCTRL k2 &ht LSHFT k3  &ht LALT  k4
-#define HRMR(k1,k2,k3) &ht RALT k1 &ht RSHFT  k2  &ht RCTRL k3
+#define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LSHFT k2 &ht LCTRL k3  &ht LALT  k4
+#define HRMR(k1,k2,k3) &ht RALT k1 &ht RCTRL k2 &ht RSHFT k3
 
 #define WIN 0
 #define SYM 1
@@ -35,13 +35,13 @@
         sm_ca: comma_apostrophe {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp KP_COMMA>, <&kp APOS>;
+            bindings = <&kp COMMA>, <&kp APOS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        sm_dc: dot_colon {
+        sm_dq: dot_doublequote {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp KP_DOT>, <&kp COLON>;
+            bindings = <&kp DOT>, <&kp DQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         sm_rs: return_slash {
@@ -75,28 +75,10 @@
             bindings = <&kp KP_EQUAL>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        sm_op: zero_parenthesis {
+        sm_sp: slash_percent {X
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp KP_N0>, <&kp RPAR>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        sm_dco: two_comma {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp KP_N2>, <&kp KP_COMMA>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        sm_ts: three_dot {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp KP_N3>, <&kp KP_DOT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        sm_sa: slash_ampersand {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp KP_SLASH>, <&kp AMPS>;
+            bindings = <&kp KP_SLASH>, <&kp PRCNT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -122,8 +104,8 @@
             // │     A     │     S     │     D     │     F     │     G     │   │     H     │     J     │     K     │     L     │    ( _    │
             HRML(    A     ,     S     ,     D     ,     F )  &kp    G        &kp    H   HRMR(   J     ,     K     ,     L     )   &sm_pu
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
-            // │     Z     │     X     │     C     │     V     │     B     │   │     N     │     M     │    , '    │    . :    │   </ /    │
-              &kp    Z    &kp    X    &kp    C    &kp    V    &kp    B        &kp    N    &kp    M         &sm_ca      &sm_dc     &sm_rs
+            // │     Z     │     X     │     C     │     V     │     B     │   │     N     │     M     │ ,'        │ .;        │    ; :    │
+              &kp    Z    &kp    X    &kp    C    &kp    V    &kp    B        &kp    N    &kp    M         &sm_ca      &sm_dq &kp  SEMI
             // ╰───────────┴───────────┴───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────╯
             //                                     │  NAV ->   │    <XX    │   │    ._.    │  SYM  </  │
                                                   &lt NAV TAB &kp   BSPC      &kp  SPACE  &lt SYM RET
@@ -135,19 +117,18 @@
             bindings = <
             // Symbols and Numbers:
             // ╭───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────╮
-            // │     &     │     |     │     ]     │     }     │     $     │   │     +     │     7     │     8     │     9     │    * ^    │
-              &kp  AMPS   &kp  PIPE   &kp  RBKT   &kp   RBRC  &kp  DOLLAR     &kp  PLUS   &kp    N7   &kp    N8   &kp    N9        &sm_mc
+            // │     &     │     |     │     ]     │     }     │     $     │   │     +     │    7 &    │    8 ^    │    9 (    │    * ^    │
+              &kp  AMPS   &kp  PIPE   &kp  RBKT   &kp   RBRC  &kp  DOLLAR     &kp  PLUS   &kp    N7   &kp  KP_N8  &kp    N9        &sm_mc
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
-            // │    " `    │    /^\    │     [     │     {     │    < >    │   │    = ~    │     4     │     5     │     6     │    0 )    │
-                  &sm_dg  &kp  LSHFT  &kp  LBKT   &kp   LBRC       &sm_lr          &sm_et &kp    N4   &kp    N5    &kp   N6        &sm_op
+            // │    " `    │    /^\    │     [     │     {     │    < >    │   │    = ~    │    4 <=   │    5 %    │    6 =>   │    0 )    │
+                  &sm_dg  &kp  LSHFT  &kp  LBKT   &kp   LBRC       &sm_lr          &sm_et &kp  KP_N4  &kp    N5   &kp  KP_N6  &kp   N0
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
-            // │     @     │     #     │     !     │     ?     │    \ |    │   │    - _    │     1     │    2 ,    │    3 .    │    / %    │
-              &kp    AT   &kp   HASH  &kp   EXCL  &kp  QMARK  &kp   BSLH      &kp  MINUS  &kp    N1       &sm_dco      &sm_ts      &sm_sa
+            // │     @     │     #     │     !     │     ?     │    \ |    │   │    - _    │    1 !    │    2 V    │    3 #    │    / %    │
+              &kp    AT   &kp   HASH  &kp   EXCL  &kp  QMARK  &kp   BSLH      &kp  MINUS  &kp    N1   &kp  KP_N2  &kp    N2       &sm_sp
             // ╰───────────┴───────────┴───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────╯
-            //                                     │    MISC   │    <XX    │   │    ._.    │     V     │
+            //                                     │    MISC   │    <XX    │   │    ._.    │     V     │    2 @        3 #
                                                        &trans      &trans          &trans      &trans
             //                                     ╰───────────┴───────────╯   ╰───────────┴───────────╯
-            >;
         };
 
         navigation_layer {
