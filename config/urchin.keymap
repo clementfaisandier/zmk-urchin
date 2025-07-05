@@ -72,7 +72,7 @@
         sm_et: equal_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp KP_EQUAL>, <&kp TILDE>;
+            bindings = <&kp EQUAL>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         sm_sp: slash_percent {
