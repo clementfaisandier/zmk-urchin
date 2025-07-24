@@ -23,4 +23,4 @@ Firmware for: [Urchin Keyboard](https://github.com/duckyb/urchin)
 
 </div> -->
 
-![alt text](<Layout.jpg>)
+![alt text](<Layout.png>)
