@@ -181,7 +181,7 @@
                   &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
             // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
             // │   LCTRL   │     Z     │     X     │     C     │     V     │   │           │           │           │           │           │
-                  &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
+                  &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans  &tog  GAM
             // ╰───────────┴───────────┴───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────╯
             //                                     │           │   LALT    │   │           │           │
                                                       &trans      &trans          &trans      &trans
